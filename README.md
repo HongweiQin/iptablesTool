@@ -18,7 +18,7 @@ ToBeDone
 ToBeDone
 
 ## Contact me
-Emain: [glqinhw@163.com](mailto:glqinhw@163.com)
+E-mail: [glqinhw@163.com](mailto:glqinhw@163.com)
 
 ## Licence
 

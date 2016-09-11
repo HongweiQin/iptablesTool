@@ -18,6 +18,13 @@
 # along with iptablesTool.  If not, see <http://www.gnu.org/licenses/>.
  
 #!/bin/bash
+
+# Declair variables
+
+# read config file
+source ./Config
+
+# Declair functions
 function fhelp()
 {
 echo "portMap - map a LAN server port to a WAN port"
@@ -36,6 +43,11 @@ function pmap()
 
 }
 
+
+
+# End of function declairations
+
+# Here we go!
 echo "Welcome to use iptables tool!"
 echo "type ? for help"
 goon=1
