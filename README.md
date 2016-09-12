@@ -1,6 +1,8 @@
 # iptablesTool
 A tool help us configure the iptables policies.
 
+Note! This work has ***NOT*** finished yet. Please donot use it!
+
 ## Introduction
 Have you ever met such kind of situation where you want to add a really simple function on your Linux router but you're not quite familiar with the *iptables* command?
 
