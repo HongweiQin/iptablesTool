@@ -54,7 +54,7 @@ echo $1 >> $TMP_FILE
 function fhelp()
 {
 echo "portMap - map a LAN server port to a WAN port"
-echo "export - export current commands to a file"
+echo "export [filename] - export current commands to a file"
 echo "show - show commands in temp file"
 echo "? - print out available commands"
 echo "quit - Exit program"
@@ -62,7 +62,20 @@ echo "quit - Exit program"
 
 function fshow()
 {
-cat $TMP_FILE
+	cat $TMP_FILE
+}
+
+function fexport()
+{
+	if test $1
+	then
+		# Maybe more tests?
+		cp $TMP_FILE $1
+		echo "Current commands has been exported to "$1
+	else
+		echo "NULL filename, command ignored."
+		return
+	fi
 }
 
 function fpmap()
@@ -103,9 +116,13 @@ goon=1
 while (($goon))
 do
 	printf "==>"
-	read cmd
+	read cmd argm1
+	#echo "cmd="$cmd
+	#echo "fname="$fname
  	case $cmd in
 		'?') fhelp ;
+		;;
+		export) fexport $argm1;
 		;;
 		show) fshow ;
 		;;
